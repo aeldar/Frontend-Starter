@@ -1,0 +1,28 @@
+{
+  "root": "apps/starter-shop-e2e",
+  "sourceRoot": "apps/starter-shop-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/starter-shop-e2e/cypress.json",
+        "devServerTarget": "starter-shop:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "starter-shop:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/starter-shop-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["starter-shop"]
+}
