@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <a routerLink="/" class="logo-link">Starter Shop</a>
+    <span class="filler"></span>
+
+    <a mat-button routerLink="/hidden/users">Impersonate yourself as...</a>
+    <mat-divider vertical></mat-divider>
+    <a mat-icon-button routerLink="/admin/users" color="accent"><mat-icon>people</mat-icon></a>
+    <a mat-icon-button routerLink="/admin/products" color="accent"><mat-icon>category</mat-icon></a>
+    <mat-divider vertical></mat-divider>
+    <a mat-icon-button routerLink="/products"><mat-icon>category</mat-icon></a>
+    <a mat-icon-button routerLink="/my/cart"><mat-icon>shopping_cart</mat-icon></a>
+    <a mat-icon-button routerLink="/my/account"><mat-icon>person</mat-icon></a>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

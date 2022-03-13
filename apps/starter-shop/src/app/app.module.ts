@@ -1,3 +1,4 @@
+import { ShellComponentModule } from './shell/shell.component';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ENV } from '@starter/env';
@@ -7,7 +8,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserAnimationsModule, AppRoutingModule],
+  imports: [BrowserAnimationsModule, AppRoutingModule, ShellComponentModule],
   providers: [
     {
       provide: ENV,
