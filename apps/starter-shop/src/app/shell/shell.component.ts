@@ -5,6 +5,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -24,6 +25,7 @@ export class ShellComponent {}
     MatIconModule,
     MatDividerModule,
     MatTooltipModule,
+    MatMenuModule,
   ],
   declarations: [ShellComponent],
   exports: [ShellComponent],
