@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/model",
+  "sourceRoot": "libs/model/src",
+  "prefix": "starter",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/model"],
+      "options": {
+        "jestConfig": "libs/model/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/model/src/**/*.ts",
+          "libs/model/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:model"]
+}
