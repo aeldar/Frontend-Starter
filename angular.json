@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "env": "libs/env",
+    "features-products": "libs/features/products",
     "starter-shop": "apps/starter-shop",
     "starter-shop-e2e": "apps/starter-shop-e2e"
   }

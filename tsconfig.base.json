@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@starter/env": ["libs/env/src/index.ts"]
+      "@starter/env": ["libs/env/src/index.ts"],
+      "@starter/features/products": ["libs/features/products/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
