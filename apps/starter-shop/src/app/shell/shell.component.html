@@ -6,20 +6,15 @@
 
   <mat-divider vertical></mat-divider>
 
-  <button
-    mat-icon-button
-    color="accent"
-    [matMenuTriggerFor]="adminMenu"
-    aria-label="Admin menu"
-  >
+  <button mat-icon-button color="accent" [matMenuTriggerFor]="adminMenu" aria-label="Admin menu" matTooltip="Admin menu">
     <mat-icon>admin_panel_settings</mat-icon>
   </button>
   <mat-menu #adminMenu="matMenu">
-    <a mat-menu-item routerLink="/admin/users" color="accent">
+    <a mat-menu-item routerLink="/admin/users">
       <mat-icon>people</mat-icon>
       <span>Users</span>
     </a>
-    <a mat-menu-item routerLink="/admin/products" color="accent">
+    <a mat-menu-item routerLink="/admin/products">
       <mat-icon>category</mat-icon>
       <span>Products</span>
     </a>
@@ -27,11 +22,15 @@
 
   <mat-divider vertical></mat-divider>
 
-  <a mat-icon-button routerLink="/products"><mat-icon>category</mat-icon></a>
-  <a mat-icon-button routerLink="/my/cart"
-    ><mat-icon>shopping_cart</mat-icon></a
-  >
-  <a mat-icon-button routerLink="/my/account"><mat-icon>person</mat-icon></a>
+  <a mat-icon-button routerLink="/products" matTooltip="Products">
+    <mat-icon>category</mat-icon>
+  </a>
+  <a mat-icon-button routerLink="/my/cart" matTooltip="My cart">
+    <mat-icon>shopping_cart</mat-icon>
+  </a>
+  <a mat-icon-button routerLink="/my/account" matTooltip="My account">
+    <mat-icon>person</mat-icon>
+  </a>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
