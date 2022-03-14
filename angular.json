@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "env": "libs/env",
+    "features-account": "libs/features/account",
     "features-admin-products": "libs/features/admin-products",
     "features-admin-users": "libs/features/admin-users",
     "features-cart": "libs/features/cart",
