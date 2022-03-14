@@ -2,10 +2,6 @@
   <a routerLink="/" class="logo-link">Starter Shop</a>
   <span class="filler"></span>
 
-  <a mat-button routerLink="/hidden/users">Impersonate yourself as...</a>
-
-  <mat-divider vertical></mat-divider>
-
   <button mat-icon-button color="accent" [matMenuTriggerFor]="adminMenu" aria-label="Admin menu" matTooltip="Admin menu">
     <mat-icon>admin_panel_settings</mat-icon>
   </button>
@@ -20,17 +16,23 @@
     </a>
   </mat-menu>
 
-  <mat-divider vertical></mat-divider>
-
-  <a mat-icon-button routerLink="/products" matTooltip="Products">
-    <mat-icon>category</mat-icon>
-  </a>
   <a mat-icon-button routerLink="/my/cart" matTooltip="My cart">
     <mat-icon>shopping_cart</mat-icon>
   </a>
-  <a mat-icon-button routerLink="/my/account" matTooltip="My account">
-    <mat-icon>person</mat-icon>
+  <a mat-icon-button [matMenuTriggerFor]="userMenu" aria-label="User menu" matTooltip="User menu">
+    <mat-icon>account_circle</mat-icon>
   </a>
+  <mat-menu #userMenu="matMenu">
+    <a mat-menu-item routerLink="/my/account">
+      <mat-icon>person</mat-icon>
+      <span>My account</span>
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-menu-item routerLink="/hidden/users">
+      <mat-icon>supervisor_account</mat-icon>
+      <span>Impersonate as...</span>
+    </a>
+  </mat-menu>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
