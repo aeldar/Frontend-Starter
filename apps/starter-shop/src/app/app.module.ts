@@ -5,10 +5,11 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShellComponentModule } from '@starter/ui/shell';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserAnimationsModule, AppRoutingModule, ShellComponentModule],
+  imports: [BrowserAnimationsModule, HttpClientModule, AppRoutingModule, ShellComponentModule],
   providers: [
     {
       provide: ENV,
