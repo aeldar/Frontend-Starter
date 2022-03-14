@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/features/admin-products",
+  "sourceRoot": "libs/features/admin-products/src",
+  "prefix": "starter",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/features/admin-products"],
+      "options": {
+        "jestConfig": "libs/features/admin-products/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/features/admin-products/src/**/*.ts", "libs/features/admin-products/src/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:feat"]
+}

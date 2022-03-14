@@ -1,10 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Inject,
-  NgModule,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, NgModule } from '@angular/core';
 import { Env, ENV } from '@starter/env';
 
 @Component({
@@ -15,6 +10,7 @@ import { Env, ENV } from '@starter/env';
 })
 export class ProductListComponent {
   api_url: string;
+
   constructor(@Inject(ENV) env: Env) {
     this.api_url = env.API_URL;
   }
