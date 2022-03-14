@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "data-access": "libs/data-access",
     "env": "libs/env",
     "features-account": "libs/features/account",
     "features-admin-products": "libs/features/admin-products",

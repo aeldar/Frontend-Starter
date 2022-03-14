@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@starter/data-access": ["libs/data-access/src/index.ts"],
       "@starter/env": ["libs/env/src/index.ts"],
       "@starter/features/account": ["libs/features/account/src/index.ts"],
       "@starter/features/admin-products": ["libs/features/admin-products/src/index.ts"],
