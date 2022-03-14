@@ -9,6 +9,7 @@
     "features-products": "libs/features/products",
     "model": "libs/model",
     "starter-shop": "apps/starter-shop",
-    "starter-shop-e2e": "apps/starter-shop-e2e"
+    "starter-shop-e2e": "apps/starter-shop-e2e",
+    "ui-shell": "libs/ui/shell"
   }
 }
