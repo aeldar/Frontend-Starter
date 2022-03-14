@@ -1,7 +1,8 @@
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UsersService } from '@starter/data-access';
-import { Observable } from 'rxjs';
+import { MeService, UsersService } from '@starter/data-access';
+import { Observable, map, distinctUntilChanged } from 'rxjs';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,11 +20,20 @@ export class UserListComponent {
 
   readonly users$: Observable<User[]> = this.users.getUsers();
 
-  constructor(public users: UsersService) {}
+  readonly currentUserId$: Observable<number | null> = this.me.currentUser$.pipe(
+    map((user) => user?.id ?? null),
+    distinctUntilChanged()
+  );
+
+  constructor(public users: UsersService, private me: MeService) {}
+
+  onImpersonate(user: User): void {
+    this.me.impersonate(user);
+  }
 }
 
 @NgModule({
-  imports: [CommonModule, MatTableModule, MatButtonModule, MatIconModule, AvatarComponentModule],
+  imports: [CommonModule, MatTableModule, MatButtonModule, MatIconModule, MatTooltipModule, AvatarComponentModule],
   declarations: [UserListComponent],
   exports: [UserListComponent],
 })
