@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
+import { MeService } from '@starter/data-access';
 
 @Component({
   selector: 'starter-shell',
@@ -14,7 +15,16 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./shell.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ShellComponent {}
+export class ShellComponent {
+  readonly isAuthenticated$ = this.meService.isAuthenticated$;
+  readonly isAdmin$ = this.meService.isAdmin$;
+
+  constructor(private meService: MeService) {}
+
+  onLogoutClick(): void {
+    this.meService.logOut();
+  }
+}
 
 @NgModule({
   imports: [
