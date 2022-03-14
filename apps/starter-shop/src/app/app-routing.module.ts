@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { IsAdminGuard, IsAuthenticatedGuard } from '@starter/data-access';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'my',
+    canActivate: [IsAuthenticatedGuard],
     children: [
       {
         path: 'cart',
@@ -26,6 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canActivate: [IsAdminGuard],
     children: [
       {
         path: 'users',
