@@ -1,5 +1,7 @@
 # Starter Shop
 
+A place where anyone can impersonate any other one. Please see the task [here](README-task.md).
+
 This project was bootstrapped with [Nx](https://nx.dev).
 
 ## Install
