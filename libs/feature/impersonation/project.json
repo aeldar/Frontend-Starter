@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/feature/impersonation",
+  "sourceRoot": "libs/feature/impersonation/src",
+  "prefix": "starter",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/feature/impersonation"],
+      "options": {
+        "jestConfig": "libs/feature/impersonation/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/feature/impersonation/src/**/*.ts", "libs/feature/impersonation/src/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:feat"]
+}

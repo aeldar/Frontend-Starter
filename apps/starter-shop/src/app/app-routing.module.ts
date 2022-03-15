@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'products',
-    loadChildren: () => import('@starter/features/products').then((m) => m.ProductsModule),
+    loadChildren: () => import('@starter/feature-products').then((m) => m.ProductsModule),
   },
   {
     path: 'my',
@@ -18,11 +18,11 @@ const routes: Routes = [
     children: [
       {
         path: 'cart',
-        loadChildren: () => import('@starter/features/cart').then((m) => m.CartModule),
+        loadChildren: () => import('@starter/feature-cart').then((m) => m.CartModule),
       },
       {
         path: 'account',
-        loadChildren: () => import('@starter/features/account').then((m) => m.AccountModule),
+        loadChildren: () => import('@starter/feature-account').then((m) => m.AccountModule),
       },
     ],
   },
@@ -32,17 +32,17 @@ const routes: Routes = [
     children: [
       {
         path: 'users',
-        loadChildren: () => import('@starter/features/admin-users').then((m) => m.AdminUsersModule),
+        loadChildren: () => import('@starter/feature-admin-users').then((m) => m.AdminUsersModule),
       },
       {
         path: 'products',
-        loadChildren: () => import('@starter/features/admin-products').then((m) => m.AdminProductsModule),
+        loadChildren: () => import('@starter/feature-admin-products').then((m) => m.AdminProductsModule),
       },
     ],
   },
   {
     path: 'hidden/users',
-    loadChildren: () => import('@starter/features/impersonation').then((m) => m.ImpersonationModule),
+    loadChildren: () => import('@starter/feature-impersonation').then((m) => m.ImpersonationModule),
   },
 ];
 
