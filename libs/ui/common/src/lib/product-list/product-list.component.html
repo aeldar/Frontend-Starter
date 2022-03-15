@@ -1,2 +1,10 @@
 <p>product-list works!</p>
 <pre>isAdmin: {{ isAdmin | json }}</pre>
+
+<mat-paginator [length]="total" [pageSize]="pageSize" (page)="page.emit($event)" aria-label="Select page"></mat-paginator>
+
+<section class="products">
+  <div class="product" *ngFor="let product of products">
+    <!-- TODO -->
+  </div>
+</section>
