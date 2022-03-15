@@ -5,11 +5,12 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import {ShellComponentModule} from "@starter/ui/shell";
+import { ShellComponentModule } from '@starter/ui/shell';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserAnimationsModule, HttpClientModule, AppRoutingModule, ShellComponentModule],
+  imports: [BrowserAnimationsModule, HttpClientModule, AppRoutingModule, ShellComponentModule, MatSnackBarModule],
   providers: [
     {
       provide: ENV,
