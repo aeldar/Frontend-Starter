@@ -1,21 +1,21 @@
 {
   "projectType": "library",
-  "root": "libs/ui-common",
-  "sourceRoot": "libs/ui-common/src",
+  "root": "libs/ui/common",
+  "sourceRoot": "libs/ui/common/src",
   "prefix": "starter",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ui-common"],
+      "outputs": ["coverage/libs/ui/common"],
       "options": {
-        "jestConfig": "libs/ui-common/jest.config.js",
+        "jestConfig": "libs/ui/common/jest.config.js",
         "passWithNoTests": true
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["libs/ui-common/src/**/*.ts", "libs/ui-common/src/**/*.html"]
+        "lintFilePatterns": ["libs/ui/common/src/**/*.ts", "libs/ui/common/src/**/*.html"]
       }
     }
   },

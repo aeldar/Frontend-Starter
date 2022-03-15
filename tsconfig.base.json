@@ -24,8 +24,8 @@
       "@starter/features/impersonation": ["libs/features/impersonation/src/index.ts"],
       "@starter/features/products": ["libs/features/products/src/index.ts"],
       "@starter/model": ["libs/model/src/index.ts"],
-      "@starter/ui-common": ["libs/ui-common/src/index.ts"],
-      "@starter/ui-shell": ["libs/ui-shell/src/index.ts"]
+      "@starter/ui/common": ["libs/ui/common/src/index.ts"],
+      "@starter/ui/shell": ["libs/ui/shell/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

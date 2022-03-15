@@ -2,12 +2,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MeService, UsersService } from '@starter/data-access';
-import { Observable, map, distinctUntilChanged } from 'rxjs';
+import { distinctUntilChanged, map, Observable } from 'rxjs';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { User } from '@starter/model';
-import { AvatarComponentModule } from '@starter/ui-common';
+import { AvatarComponentModule } from '@starter/ui/common';
 
 @Component({
   selector: 'starter-user-list',

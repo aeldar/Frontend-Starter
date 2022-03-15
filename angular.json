@@ -12,7 +12,7 @@
     "model": "libs/model",
     "starter-shop": "apps/starter-shop",
     "starter-shop-e2e": "apps/starter-shop-e2e",
-    "ui-common": "libs/ui-common",
-    "ui-shell": "libs/ui-shell"
+    "ui-common": "libs/ui/common",
+    "ui-shell": "libs/ui/shell"
   }
 }
