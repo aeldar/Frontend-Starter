@@ -27,6 +27,7 @@ npm start
 ## Structure
 
 - `apps/starter-shop` - the main entry point for the app.
+- `apps/starter-shop-e2e` - integration tests.
 - `libs/feature/*` - feature libs, usually lazy loaded screens.
 - `libs/env` - typed environment injectable object, to be defined inside the app.
 - `libs/ui/*` - UI libraries.

@@ -9,6 +9,7 @@
     "build": "nx build",
     "test": "nx test",
     "backend:start": "json-server ./generator.js --port 8080 --delay 500",
+    "e2e": "nx e2e",
     "graph": "nx graph"
   },
   "private": true,
