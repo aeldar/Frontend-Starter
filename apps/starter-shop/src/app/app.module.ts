@@ -4,7 +4,7 @@ import { ENV } from '@starter/env';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ShellComponentModule } from '@starter/ui/shell';
+import { ShellComponentModule } from '@starter/ui-shell';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({

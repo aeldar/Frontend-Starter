@@ -7,7 +7,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { User } from '@starter/model';
-import { AvatarComponentModule } from '@starter/ui';
+import { AvatarComponentModule } from '@starter/ui-common';
 
 @Component({
   selector: 'starter-user-list',
