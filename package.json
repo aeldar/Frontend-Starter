@@ -8,7 +8,8 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "backend:start": "json-server ./generator.js --port 8080 --delay 500"
+    "backend:start": "json-server ./generator.js --port 8080 --delay 500",
+    "graph": "nx graph"
   },
   "private": true,
   "dependencies": {
