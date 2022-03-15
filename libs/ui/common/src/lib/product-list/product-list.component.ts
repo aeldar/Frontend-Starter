@@ -1,6 +1,5 @@
+import { ChangeDetectionStrategy, Component, Input, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Inject, NgModule } from '@angular/core';
-import { Env, ENV } from '@starter/env';
 
 @Component({
   selector: 'starter-product-list',
@@ -9,11 +8,7 @@ import { Env, ENV } from '@starter/env';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductListComponent {
-  api_url: string;
-
-  constructor(@Inject(ENV) env: Env) {
-    this.api_url = env.API_URL;
-  }
+  @Input() isAdmin = false;
 }
 
 @NgModule({
