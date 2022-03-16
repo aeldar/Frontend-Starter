@@ -4,8 +4,10 @@ $avatarSize: 40px;
   display: inline-block;
 }
 
-img {
+img,
+.no-avatar {
   border-radius: 50%;
   display: block;
   width: $avatarSize;
+  text-align: center;
 }

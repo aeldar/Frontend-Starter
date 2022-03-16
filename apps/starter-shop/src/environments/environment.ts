@@ -7,6 +7,7 @@ import { Env } from '@starter/env';
 export const environment: Env = {
   production: false,
   API_URL: 'http://localhost:8080',
+  PRODUCT_DEFAULT_LIMIT: 10,
 };
 
 /*
