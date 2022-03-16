@@ -38,10 +38,10 @@
     </span>
   </mat-card-content>
   <mat-card-actions align="end">
-    <button *ngIf="isAdmin" color="warn" mat-button matTooltip="Edit this product">
+    <button *ngIf="isAdmin" color="warn" mat-button matTooltip="Edit this product" (click)="onEdit()">
       <mat-icon>edit</mat-icon>
     </button>
-    <button *ngIf="isAuthenticated" color="primary" mat-button matTooltip="Add to cart">
+    <button *ngIf="isAuthenticated" color="primary" mat-button matTooltip="Add to cart" (click)="onAddToCart()">
       <mat-icon>add_shopping_cart</mat-icon>
     </button>
   </mat-card-actions>
