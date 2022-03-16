@@ -3,11 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 import { Env } from '@starter/env';
+import { ENVIRONMENT_DEFAULTS } from './environment.default';
 
 export const environment: Env = {
+  ...ENVIRONMENT_DEFAULTS,
   production: false,
   API_URL: 'http://localhost:8080',
-  PRODUCT_DEFAULT_LIMIT: 10,
 };
 
 /*
