@@ -1,0 +1,53 @@
+<h1>Users</h1>
+<p>You can impersonate any of them</p>
+
+<ng-container *ngIf="users$ | async as users">
+  <table mat-table [dataSource]="users" [trackBy]="trackByUserId">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name.firstName }} {{ element.name.lastName }}</td>
+    </ng-container>
+
+    <!-- Avatar Column -->
+    <ng-container matColumnDef="avatar">
+      <th mat-header-cell *matHeaderCellDef>Avatar</th>
+      <td mat-cell *matCellDef="let element">
+        <starter-avatar [url]="element.avatar"></starter-avatar>
+      </td>
+    </ng-container>
+
+    <!-- Role Column -->
+    <ng-container matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef>Role</th>
+      <td mat-cell *matCellDef="let element">{{ element.role }}</td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef class="impersonate-column">Impersonate!</th>
+      <td mat-cell *matCellDef="let element" class="impersonate-column">
+        <button
+          color="accent"
+          mat-icon-button
+          mat-button
+          (click)="onImpersonate(element)"
+          *ngIf="(currentUserId$ | async) !== element.id; else itIsYou"
+        >
+          <mat-icon>supervisor_account</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</ng-container>
+
+<ng-template #itIsYou>now it is you</ng-template>

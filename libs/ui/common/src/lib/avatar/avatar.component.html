@@ -1,0 +1,2 @@
+<img width="40" height="40" [src]="url" alt="avatar" *ngIf="url; else noAvatar" (error)="url = null" />
+<ng-template #noAvatar><span class="no-avatar">N/A</span></ng-template>

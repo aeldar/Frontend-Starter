@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/feature/not-found",
+  "sourceRoot": "libs/feature/not-found/src",
+  "prefix": "starter",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/feature/not-found"],
+      "options": {
+        "jestConfig": "libs/feature/not-found/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/feature/not-found/src/**/*.ts", "libs/feature/not-found/src/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:feat"]
+}

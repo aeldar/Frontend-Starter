@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/feature/cart",
+  "sourceRoot": "libs/feature/cart/src",
+  "prefix": "starter",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/feature/cart"],
+      "options": {
+        "jestConfig": "libs/feature/cart/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/feature/cart/src/**/*.ts", "libs/feature/cart/src/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:feat"]
+}

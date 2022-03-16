@@ -1,0 +1,24 @@
+.filler {
+  flex: 1;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: unset;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+mat-toolbar {
+  flex: 0 auto;
+}
+
+main {
+  flex: 1;
+  overflow: auto;
+}

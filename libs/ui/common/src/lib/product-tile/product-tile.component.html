@@ -1,0 +1,48 @@
+<!--<ng-container *ngIf="product">
+  &lt;!&ndash;  <h4>{{ product.name }}</h4>&ndash;&gt;
+  &lt;!&ndash;  <div><img [src]="product.defaultImage" [alt]="product.name" class="product-image" /></div>&ndash;&gt;
+  <p *ngIf="product.images?.length">
+    Images (open in new window):
+    <span *ngFor="let imageUri of product.images; let index = index; let last = last"
+      ><a [href]="imageUri" target="_blank">{{ index + 1 }}</a
+      ><ng-container *ngIf="!last">, </ng-container></span
+    >
+  </p>
+  &lt;!&ndash;  <p>{{ product.description }}</p>&ndash;&gt;
+&lt;!&ndash;  <p>&ndash;&gt;
+&lt;!&ndash;    Price: <strong>{{ product.price }}</strong>&ndash;&gt;
+&lt;!&ndash;  </p>&ndash;&gt;
+&lt;!&ndash;  <p>&ndash;&gt;
+&lt;!&ndash;    Discount: <strong>{{ product.discount }}</strong>&ndash;&gt;
+&lt;!&ndash;  </p>&ndash;&gt;
+</ng-container>-->
+
+<mat-card *ngIf="product">
+  <mat-card-header>
+    <mat-card-title>{{ product.name }}</mat-card-title>
+    <mat-card-subtitle
+      >Price: <strong>{{ product.price | currency }}</strong> Discount:
+      <strong>{{ product.discount / 100 | percent }}</strong>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="product.defaultImage" [alt]="product.name" />
+  <mat-card-content>
+    <p>{{ product.description }}</p>
+  </mat-card-content>
+  <mat-card-content *ngIf="product.images?.length">
+    <!-- TODO extract into a separate component -->
+    <span class="product-thumb">
+      <a class="product-thumb__link" *ngFor="let imageUri of product.images; let index = index" [href]="imageUri" target="_blank"
+        ><img class="product-thumb__image" [src]="imageUri" [alt]="index + ': ' + product.name"
+      /></a>
+    </span>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button *ngIf="isAdmin" color="warn" mat-button matTooltip="Edit this product">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button *ngIf="isAuthenticated" color="primary" mat-button matTooltip="Add to cart">
+      <mat-icon>add_shopping_cart</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

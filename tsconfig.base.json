@@ -14,7 +14,21 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@starter/data-access": ["libs/data-access/src/index.ts"],
+      "@starter/env": ["libs/env/src/index.ts"],
+      "@starter/feature-account": ["libs/feature/account/src/index.ts"],
+      "@starter/feature-admin-products": ["libs/feature/admin-products/src/index.ts"],
+      "@starter/feature-admin-users": ["libs/feature/admin-users/src/index.ts"],
+      "@starter/feature-cart": ["libs/feature/cart/src/index.ts"],
+      "@starter/feature-impersonation": ["libs/feature/impersonation/src/index.ts"],
+      "@starter/feature-products": ["libs/feature/products/src/index.ts"],
+      "@starter/feature/not-found": ["libs/feature/not-found/src/index.ts"],
+      "@starter/model": ["libs/model/src/index.ts"],
+      "@starter/ui/common": ["libs/ui/common/src/index.ts"],
+      "@starter/ui/shell": ["libs/ui/shell/src/index.ts"],
+      "@starter/ui/under-construction": ["libs/ui/under-construction/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

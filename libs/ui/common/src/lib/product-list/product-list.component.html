@@ -1,0 +1,14 @@
+<mat-paginator [length]="total" [pageSize]="pageSize" (page)="page.emit($event)" aria-label="Select page"></mat-paginator>
+
+<section class="products" *ngIf="products?.length; else noProducts">
+  <starter-product-tile
+    *ngFor="let product of products; trackBy: trackByProductId"
+    [product]="product"
+    [isAdmin]="isAdmin"
+    [isAuthenticated]="isAuthenticated"
+  ></starter-product-tile>
+</section>
+
+<ng-template #noProducts>
+  <p class="empty-product-list">This list is empty</p>
+</ng-template>

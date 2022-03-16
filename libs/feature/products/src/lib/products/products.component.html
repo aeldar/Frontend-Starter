@@ -1,0 +1,8 @@
+<starter-product-list
+  [isAdmin]="!!(isAdmin$ | async)"
+  [isAuthenticated]="!!(isAuthenticated$ | async)"
+  [products]="(products$ | async) || []"
+  [total]="total"
+  [pageSize]="productsPerPage"
+  (page)="onPage($event)"
+></starter-product-list>

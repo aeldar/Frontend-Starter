@@ -1,0 +1,10 @@
+import { Env } from '@starter/env';
+
+type DEFAULT_KEY_LIST = 'PRODUCTS_DEFAULT_LIMIT' | 'PRODUCTS_API_PATH' | 'USERS_API_PATH';
+
+export const ENVIRONMENT_DEFAULTS: Pick<Env, DEFAULT_KEY_LIST> = {
+  PRODUCTS_DEFAULT_LIMIT: 9,
+  PRODUCTS_API_PATH: 'products',
+
+  USERS_API_PATH: 'users',
+};
