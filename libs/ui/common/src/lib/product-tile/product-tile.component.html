@@ -1,2 +1,17 @@
-<p>product-tile works!</p>
-<pre *ngIf="product">{{ product | json }}</pre>
+<ng-container *ngIf="product">
+  <h4>{{ product.name }}</h4>
+  <p><img [src]="product.defaultImage" [alt]="product.name" class="product-image" /></p>
+  <p *ngIf="product.images?.length">
+    Images (open in new window):
+    <span *ngFor="let imageUri of product.images; let index = index"
+      ><a [href]="imageUri" target="_blank">{{ index + 1 }}</a></span
+    >
+  </p>
+  <p>{{ product.description }}</p>
+  <p>
+    Price: <strong>{{ product.price }}</strong>
+  </p>
+  <p>
+    Discount: <strong>{{ product.discount }}</strong>
+  </p>
+</ng-container>

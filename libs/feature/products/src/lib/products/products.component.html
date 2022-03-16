@@ -1,1 +1,6 @@
-<starter-product-list [isAdmin]="!!(isAdmin$ | async)"></starter-product-list>
+<starter-product-list
+  [isAdmin]="!!(isAdmin$ | async)"
+  [products]="(products | async) || []"
+  [total]="total"
+  (page)="onPage($event)"
+></starter-product-list>

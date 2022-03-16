@@ -2,7 +2,7 @@
 <p>You can impersonate any of them</p>
 
 <ng-container *ngIf="users$ | async as users">
-  <table mat-table [dataSource]="users">
+  <table mat-table [dataSource]="users" [trackBy]="trackByUserId">
     <!-- Id Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>Id</th>

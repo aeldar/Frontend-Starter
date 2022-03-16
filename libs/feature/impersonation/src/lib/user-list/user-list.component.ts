@@ -46,6 +46,10 @@ export class UserListComponent implements OnInit, OnDestroy {
     this.me.impersonate(user);
   }
 
+  trackByUserId(index: number, user: User): number {
+    return user.id;
+  }
+
   private handleNetworkError(): void {
     this.snackbar
       .open('Please, start the backend emulator first', 'Refresh')
