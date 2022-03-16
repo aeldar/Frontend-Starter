@@ -3,6 +3,9 @@ import { InjectionToken } from '@angular/core';
 export type Env = {
   production: boolean;
   API_URL: string;
+
+  USERS_API_PATH: string,
+
   PRODUCTS_API_PATH: string,
   PRODUCTS_DEFAULT_LIMIT: number;
 };
