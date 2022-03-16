@@ -1,0 +1,11 @@
+$avatarSize: 40px;
+
+:host {
+  display: inline-block;
+}
+
+img {
+  border-radius: 50%;
+  display: block;
+  width: $avatarSize;
+}
