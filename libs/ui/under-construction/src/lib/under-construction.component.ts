@@ -1,5 +1,8 @@
-import { Component, OnInit, ChangeDetectionStrategy, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input, NgModule } from '@angular/core';
+import { CommonModule, Location } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'starter-under-construction',
@@ -7,14 +10,20 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./under-construction.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class UnderConstructionComponent implements OnInit {
-  constructor() {}
+export class UnderConstructionComponent {
+  @Input() title = '';
+  @Input() hasEscapeLinks = true;
 
-  ngOnInit(): void {}
+  constructor(private location: Location) {}
+
+  onBackClick(event: Event): void {
+    event.preventDefault();
+    this.location.back();
+  }
 }
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule, MatButtonModule, MatIconModule],
   declarations: [UnderConstructionComponent],
   exports: [UnderConstructionComponent],
 })

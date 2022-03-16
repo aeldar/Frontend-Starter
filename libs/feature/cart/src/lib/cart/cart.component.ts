@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { UnderConstructionComponentModule } from '@starter/ui/under-construction';
 
 @Component({
   templateUrl: './cart.component.html',
@@ -9,7 +10,7 @@ import { CommonModule } from '@angular/common';
 export class CartComponent {}
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, UnderConstructionComponentModule],
   declarations: [CartComponent],
   exports: [CartComponent],
 })

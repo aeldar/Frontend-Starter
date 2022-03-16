@@ -1,1 +1,15 @@
-<p>under-construction works!</p>
+<h1>{{ title || 'Under construction' }}</h1>
+<p>This screen is under construction.</p>
+
+<ng-content></ng-content>
+
+<p *ngIf="hasEscapeLinks">
+  <button mat-stroked-button color="accent" (click)="onBackClick($event)">
+    <mat-icon>reply</mat-icon>
+    Back
+  </button>
+  <a mat-stroked-button color="primary" routerLink="/">
+    <mat-icon>home</mat-icon>
+    Home
+  </a>
+</p>
