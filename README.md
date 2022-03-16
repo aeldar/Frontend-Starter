@@ -6,7 +6,7 @@ A place where anyone can impersonate any other one. Please see the task [here](R
 
 ## Install
 
-```
+```shell
 npm ci
 ```
 
@@ -14,17 +14,23 @@ npm ci
 
 1. Start the backend emulator:
 
-```
+```shell
 npm run backend:start
 ```
 
 2. Run the app in a separate console window:
 
-```
+```shell
 npm start
 ```
 
 3. Visit [http://localhost:4200](http://localhost:4200) in a browser.
+
+## Test
+
+```shell
+npm test
+```
 
 ## Structure
 
@@ -38,7 +44,7 @@ npm start
 
 ## Dependency graph
 
-```
+```shell
 npm run graph
 ```
 
