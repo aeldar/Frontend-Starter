@@ -8,11 +8,13 @@
     "feature-admin-users": "libs/feature/admin-users",
     "feature-cart": "libs/feature/cart",
     "feature-impersonation": "libs/feature/impersonation",
+    "feature-not-found": "libs/feature/not-found",
     "feature-products": "libs/feature/products",
     "model": "libs/model",
     "starter-shop": "apps/starter-shop",
     "starter-shop-e2e": "apps/starter-shop-e2e",
     "ui-common": "libs/ui/common",
-    "ui-shell": "libs/ui/shell"
+    "ui-shell": "libs/ui/shell",
+    "ui-under-construction": "libs/ui/under-construction"
   }
 }

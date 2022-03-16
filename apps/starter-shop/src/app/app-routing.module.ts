@@ -44,6 +44,10 @@ const routes: Routes = [
     path: 'hidden/users',
     loadChildren: () => import('@starter/feature-impersonation').then((m) => m.ImpersonationModule),
   },
+  {
+    path: '**',
+    loadChildren: () => import('@starter/feature/not-found').then((m) => m.NotFoundModule),
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/ui/under-construction",
+  "sourceRoot": "libs/ui/under-construction/src",
+  "prefix": "starter",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ui/under-construction"],
+      "options": {
+        "jestConfig": "libs/ui/under-construction/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/ui/under-construction/src/**/*.ts", "libs/ui/under-construction/src/**/*.html"]
+      }
+    }
+  },
+  "tags": ["type:ui"]
+}
