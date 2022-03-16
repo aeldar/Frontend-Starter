@@ -4,7 +4,6 @@ import { ProductListComponentModule } from '@starter/ui/common';
 import { MeService } from '@starter/data-access';
 
 @Component({
-  selector: 'starter-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
