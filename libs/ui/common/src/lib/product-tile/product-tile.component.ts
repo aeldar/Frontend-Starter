@@ -1,6 +1,10 @@
 import { ChangeDetectionStrategy, Component, Input, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '@starter/model';
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @Component({
   selector: 'starter-product-tile',
@@ -10,10 +14,12 @@ import { Product } from '@starter/model';
 })
 export class ProductTileComponent {
   @Input() product: Product | null = null;
+  @Input() isAdmin = false;
+  @Input() isAuthenticated = false;
 }
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatTooltipModule],
   declarations: [ProductTileComponent],
   exports: [ProductTileComponent],
 })

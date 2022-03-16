@@ -4,7 +4,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { Product } from '@starter/model';
 import { ProductTileComponentModule } from '../product-tile/product-tile.component';
 
-const PAGE_SIZE = 10;
+const DEFAULT_PAGE_SIZE = 9;
 
 @Component({
   selector: 'starter-product-list',
@@ -13,10 +13,10 @@ const PAGE_SIZE = 10;
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductListComponent {
-  readonly pageSize = PAGE_SIZE;
-
   @Input() isAdmin = false;
+  @Input() isAuthenticated = false;
   @Input() total = 0;
+  @Input() pageSize = DEFAULT_PAGE_SIZE;
   @Input() products: Product[] = [];
 
   @Output() page = new EventEmitter();

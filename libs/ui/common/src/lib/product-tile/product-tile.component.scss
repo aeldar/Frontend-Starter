@@ -1,4 +1,23 @@
-.product-image {
-  max-width: 100px;
-  max-height: 100px;
+mat-card {
+  margin: 1rem;
+}
+
+/* TODO extract into a separate component */
+.product-thumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.product-thumb__link {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.product-thumb__image {
+  max-width: 100%;
+  height: auto;
 }
