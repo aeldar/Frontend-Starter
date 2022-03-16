@@ -10,6 +10,7 @@
     "test": "nx run-many --target test --all",
     "backend:start": "json-server ./generator.js --port 8080 --delay 500",
     "e2e": "nx e2e",
+    "lint": "nx run-many --target lint --all",
     "graph": "nx graph"
   },
   "private": true,

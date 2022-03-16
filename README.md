@@ -26,10 +26,24 @@ npm start
 
 3. Visit [http://localhost:4200](http://localhost:4200) in a browser.
 
+## Lint
+
+```shell
+npm run lint
+```
+
 ## Test
+
+### Unit
 
 ```shell
 npm test
+```
+
+### Integration
+
+```shell
+npm run e2e
 ```
 
 ## Structure
